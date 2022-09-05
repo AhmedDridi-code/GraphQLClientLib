@@ -3,6 +3,7 @@ plugins {
     id("com.android.library")
     kotlin("plugin.serialization") version "1.7.10"
     id("org.jetbrains.dokka")
+    id("maven-publish")
 
 }
 
