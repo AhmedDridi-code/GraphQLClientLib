@@ -9,7 +9,9 @@ plugins {
 
 kotlin {
     android()
-    
+    android {
+        publishLibraryVariants("release", "debug")
+    }
     listOf(
         iosX64(),
         iosArm64(),
@@ -82,6 +84,8 @@ android {
         targetSdk = 32
     }
 }
+
+
 
 tasks.dokkaHtml.configure {
     outputDirectory.set(buildDir.resolve("dokka"))
