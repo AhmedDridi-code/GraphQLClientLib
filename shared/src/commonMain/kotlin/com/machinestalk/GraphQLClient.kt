@@ -66,7 +66,6 @@ class GraphQLClient(url:String) {
      * @since v0.1
      */
     suspend fun exec(graphQLRequest: GraphQLRequest, headers: HashMap<String,String>): String {
-        // val decodedJson  = Json.decodeFromString<Test>( stringResponce )
         return httpClient.post(url) {
             if (headers !== null) {
                 for((key,value) in headers){
@@ -75,6 +74,7 @@ class GraphQLClient(url:String) {
                     }
                 }
             }
+
             contentType(ContentType.Application.Json)
             setBody(graphQLRequest)
         }.body()
