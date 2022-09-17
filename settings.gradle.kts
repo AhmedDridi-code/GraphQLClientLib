@@ -5,6 +5,6 @@ pluginManagement {
         mavenCentral()
     }
 }
-
+//includeBuild("convention-plugins")
 rootProject.name = "GraphQLClientLib"
 include(":shared")

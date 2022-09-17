@@ -11,6 +11,7 @@ import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 
 /**
+ * this class is the class that execute the graphQl request with the function execute
  *@param url the url of the server as String
  * @param httpClient the Ktor [HttpClient]
  * @see [HttpClient] [link] (https://api.ktor.io/ktor-client/ktor-client-core/io.ktor.client/-http-client.html)

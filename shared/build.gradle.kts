@@ -1,17 +1,17 @@
 plugins {
-    kotlin("multiplatform")
     id("com.android.library")
+    kotlin("multiplatform")
     kotlin("plugin.serialization") version "1.7.10"
     id("org.jetbrains.dokka")
-    id("maven-publish")
+    //id("convention.publication")
 
 }
 
 kotlin {
     android()
-    android {
+    /*android {
         publishLibraryVariants("release", "debug")
-    }
+    }*/
     listOf(
         iosX64(),
         iosArm64(),
@@ -88,7 +88,7 @@ android {
 
 
 tasks.dokkaHtml.configure {
-    outputDirectory.set(buildDir.resolve("dokka"))
+    //outputDirectory.set(buildDir.resolve("dokka"))
     dokkaSourceSets{
         configureEach{
             includes.from("MODULE.md")
